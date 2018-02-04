@@ -68,8 +68,7 @@ public class Primes {
 	}
 
 	/**
-	 * Returns the number of primes smaller than, but not including, the specified
-	 * value <b>n</b>.
+	 * Returns the number of primes smaller than the specified value <b>n</b>.
 	 * 
 	 * @param n
 	 *            the value smaller than which to count primes
