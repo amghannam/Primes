@@ -214,7 +214,7 @@ public class Primes {
 		/**
 		 * Returns the next prime number in this generator's natural-ordered sequence.
 		 * <p>
-		 * To restart the generator, use {@code resetSequence}.
+		 * To restart the generator, use {@code reset}.
 		 * 
 		 * @return the next prime in this generator's sequence, in natural order
 		 */
@@ -227,10 +227,10 @@ public class Primes {
 
 		/**
 		 * Resets the sequence of this generator such that a subsequent call to
-		 * {@code next) starts from 2. (This does not affect the behavior of the other
+		 * {@code next} starts from 2. (This does not affect the behavior of the other
 		 * methods.)
 		 */
-		public static void resetSequence() {
+		public static void reset() {
 			candidate = 2;
 		}
 	}

@@ -58,7 +58,7 @@ class PrimesTest {
 		for (int i = 0; i < a.length; i++) {
 			assertEquals(a[i], Primes.Generator.next()); 
 		}
-		Primes.Generator.resetSequence(); 
+		Primes.Generator.reset(); 
 		for (int i = 0; i < a.length; i++) {
 			assertEquals(a[i], Primes.Generator.next()); 
 		}
