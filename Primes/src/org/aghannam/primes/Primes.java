@@ -72,7 +72,7 @@ public class Primes {
 	 * 
 	 * @param n
 	 *            the value smaller than which to count primes
-	 * @return the number of primes smaller than n
+	 * @return the number of primes smaller than <b>n</b>
 	 */
 	public static int countSmallerThan(int n) {
 		int count = 0;
