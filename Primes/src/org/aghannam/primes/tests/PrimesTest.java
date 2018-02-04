@@ -6,6 +6,7 @@ import org.aghannam.primes.Primes;
 import org.junit.jupiter.api.Test;
 
 class PrimesTest {
+	// Test against this array
 	int[] a = {2, 3, 5, 7, 11, 13, 17, 19}; 
 
 	@Test
