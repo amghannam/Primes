@@ -17,6 +17,11 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class Primes {
 	/**
+	 * The default maximum value up to which a random prime will be chosen.
+	 */
+	private static final int MAX_VALUE = 10000000;
+
+	/**
 	 * For random number generation.
 	 */
 	private static Random rnd = ThreadLocalRandom.current();
@@ -108,7 +113,7 @@ public class Primes {
 	 * @return a random prime
 	 */
 	public static int random() {
-		int[] a = Generator.upTo(Integer.MAX_VALUE);
+		int[] a = Generator.upTo(MAX_VALUE);
 		return a[rnd.nextInt(a.length)];
 
 	}
@@ -204,7 +209,7 @@ public class Primes {
 		/**
 		 * Returns the next prime number in this generator's natural-ordered sequence.
 		 * <p>
-		 * To restart the generator, use {@code resetSequence()}.
+		 * To restart the generator, use {@code resetSequence}.
 		 * 
 		 * @return the next prime in this generator's sequence, in natural order
 		 */
@@ -217,7 +222,7 @@ public class Primes {
 
 		/**
 		 * Resets the sequence of this generator such that a subsequent call to
-		 * {@code} next() starts from 2. (This does not affect the behavior of the other
+		 * {@code next) starts from 2. (This does not affect the behavior of the other
 		 * methods.)
 		 */
 		public static void resetSequence() {
