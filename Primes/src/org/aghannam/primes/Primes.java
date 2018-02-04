@@ -144,6 +144,12 @@ public class Primes {
 		return a[rnd.nextInt(a.length)];
 	}
 
+	/**
+	 * A sequential prime number generator with multiple useful functions.
+	 * 
+	 * @author Ahmed Ghannam
+	 *
+	 */
 	public static class Generator {
 		/**
 		 * Current prime candidate used for sequential generation by method
