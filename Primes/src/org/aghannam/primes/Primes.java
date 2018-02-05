@@ -68,11 +68,11 @@ public class Primes {
 	}
 
 	/**
-	 * Returns the number of primes smaller than the specified value <b>n</b>.
+	 * Returns the number of primes smaller than the specified value {@code n}.
 	 * 
 	 * @param n
 	 *            the value smaller than which to count primes
-	 * @return the number of primes smaller than <b>n</b>
+	 * @return the number of primes smaller than {@code n}
 	 */
 	public static int countSmallerThan(int n) {
 		int count = 0;
@@ -84,12 +84,12 @@ public class Primes {
 	}
 
 	/**
-	 * Returns {@code true} if and only if the specified value <b>n</b> is a prime
+	 * Returns {@code true} if and only if the specified value {@code n} is a prime
 	 * number.
 	 * 
 	 * @param n
 	 *            the value to test for primality
-	 * @return {@code true} if <b>n</b> is a prime, {@code false} otherwise
+	 * @return {@code true} if {@code n} is a prime, {@code false} otherwise
 	 */
 	public static boolean isPrime(int n) {
 		if (n < 2)
@@ -152,16 +152,16 @@ public class Primes {
 	public static class Generator {
 		/**
 		 * Current prime candidate used for sequential generation by method
-		 * {@code next()}.
+		 * {@code next}. By default, it is set to 2 (the first prime number).
 		 */
 		private static int candidate = 2;
 
 		/**
-		 * Returns an array of the first <b>n</b> prime numbers.
+		 * Returns an array of the first {@code n} prime numbers.
 		 * 
 		 * @param n
 		 *            the number of primes to generate
-		 * @return an array of the first <b>n</b> primes
+		 * @return an array of the first {@code n} primes
 		 */
 		public static int[] firstN(int n) {
 			int candidate = 2;
@@ -179,11 +179,11 @@ public class Primes {
 
 		/**
 		 * Returns an array containing all prime numbers up to, but not including, the
-		 * specified value <b>n</b>.
+		 * specified value {@code n}.
 		 * 
 		 * @param n
 		 *            the upper bound of the primes to be generated
-		 * @return an array containing all primes up to <b>n</b>
+		 * @return an array containing all primes up to {@code n}
 		 */
 		public static int[] upTo(int n) {
 			int[] a = new int[countSmallerThan(n)];
@@ -214,7 +214,8 @@ public class Primes {
 		/**
 		 * Returns the next prime number in this generator's natural-ordered sequence.
 		 * <p>
-		 * To restart the generator, use {@code reset}.
+		 * To restart the generator or set a different starting point, use {@code reset}
+		 * or {@code startFrom}, respectively.
 		 * 
 		 * @return the next prime in this generator's sequence, in natural order
 		 */
@@ -227,11 +228,24 @@ public class Primes {
 
 		/**
 		 * Resets the sequence of this generator such that a subsequent call to
-		 * {@code next} starts from 2. (This does not affect the behavior of the other
-		 * methods.)
+		 * {@code next} starts from 2, the default beginning value.
+		 * 
 		 */
 		public static void reset() {
-			candidate = 2;
+			startFrom(2);
+		}
+
+		/**
+		 * Sets the starting point of the generator's sequence to the specified value
+		 * {@code n}, such that a subsequent call to {@code next} generates the prime
+		 * that immediately follows {@code n} (assuming {@code n} is not itself a
+		 * prime).
+		 * 
+		 * @param n
+		 *            the desired starting point of the generator
+		 */
+		public static void startFrom(int n) {
+			candidate = n < 2 ? 2 : n;
 		}
 	}
 }
