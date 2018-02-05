@@ -242,7 +242,7 @@ public class Primes {
 		 * prime).
 		 * 
 		 * @param n
-		 *            the desired starting point of the generator
+		 *            the desired starting point of this generator
 		 */
 		public static void startFrom(int n) {
 			candidate = n < 2 ? 2 : n;
