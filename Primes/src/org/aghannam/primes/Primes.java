@@ -186,8 +186,7 @@ public class Primes {
 		 * @return an array containing all primes up to {@code n}
 		 */
 		public static int[] upTo(int n) {
-			int[] a = new int[countSmallerThan(n)];
-			return firstN(a.length);
+			return firstN(countSmallerThan(n)); 
 		}
 
 		/**
