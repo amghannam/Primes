@@ -4,7 +4,6 @@
 package org.aghannam.primes;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -202,7 +201,7 @@ public class Primes {
 		public static int[] between(int lower, int upper) {
 			if (lower == 2 && upper > lower)
 				return firstN(countSmallerThan(upper));
-			List<Integer> primes = new ArrayList<>();
+			var primes = new ArrayList<Integer>();
 			for (int i = lower; i < upper; i++) {
 				if (isPrime(i))
 					primes.add(i);
